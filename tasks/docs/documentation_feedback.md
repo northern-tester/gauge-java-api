@@ -1,4 +1,5 @@
-_High level Improvements_
+_High Level Improvements_
+=========================
 
 * Code snippets in the languages that your integrators tend to use, helps to guide efficient integration too, plus encourage good practice such as OPTIONS calls before other verbs.
 * Overall principles for development on the front page would be nice
@@ -8,14 +9,17 @@ _High level Improvements_
 * Provide contacts details with a common issues section to repel repeat askers
 
 _Specific Documentation Improvements_
+=====================================
 
 _Homepage_
+==========
 
 * the madeup bullet point gives the http status code, not the description, its trivial to do both, so tabulate this sections  with url, description and code expected.
 * there are two unauthorized urls which APPEAR the same when you navigate to it
 * the system health endpoint has the http verb indicator, whereas the rest do not, is there value in showing all verbs available on each endpoint for quick reference?
 
 _Checking Individual Pages_
+===========================
 
 * Code and description match this oracle - https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
 
@@ -44,6 +48,7 @@ _Checking Individual Pages_
     * Doesn't really tell me what is healthy? Receiving a 200 back is only one possible indicator of health, some diagnostics would be good, Disk space, I/O, CPU or even response time against a benchmark.
 
 _Other_
+=======
 
 * When returning any documentation route, the container logs report this:
 

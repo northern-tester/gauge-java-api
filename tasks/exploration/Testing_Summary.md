@@ -1,3 +1,5 @@
+_Please note that Sky_Tech_Test_API.postman_collection along with this file shows the exploratory tests I performed_
+
 _Highlights_
 ============
 
@@ -14,7 +16,7 @@ _Risks_
 2017-10-13T17:52:13.533140024Z  An Array ({"GEM_PATH"=>["/usr/local/bundle"]}) was passed in from bin/rails:3:in `load'
 2017-10-13T17:52:15.052172009Z  [2017-10-13 17:52:15] INFO  WEBrick 1.3.1
 ```
-* Access to a product owner as information emerged during testing, had to infer from single oracle 
+* Access to a product owner as information emerged during testing, had to infer from documentation and system itself as oracles
 
 _Application Wide Issues_
 =========================

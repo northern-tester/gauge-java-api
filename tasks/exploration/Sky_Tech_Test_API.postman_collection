@@ -54,6 +54,59 @@
 						"description": "Test to show that the 404 status code is indeed returned from a non derived endpoint, something that genuinely doesn't exist"
 					},
 					"response": []
+				},
+				{
+					"name": "POST 404 returned from /madeup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 404\"] = responseCode.code === 404;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3000/madeup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"test\":123}"
+						},
+						"description": "Test to show that the 404 status code is indeed returned from the /madeup endpoint as a post"
+					},
+					"response": []
+				},
+				{
+					"name": "GET 200 returned from /madeup/last",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 404\"] = responseCode.code === 404;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3000/madeup/last",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Test to show that the 404 status code is indeed returned from the /madeup endpoint."
+					},
+					"response": []
 				}
 			]
 		},
@@ -343,7 +396,7 @@
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"Response contains original json request data\"] = unauthorized[1].bodyReceived.test === 123;"
+									"tests[\"Response contains original json request data\"] = jsonData.unauthorized[1].bodyReceived.test === 123;"
 								]
 							}
 						}

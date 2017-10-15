@@ -1,3 +1,4 @@
+import com.mashape.unirest.http.Headers;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -6,6 +7,8 @@ import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.datastore.DataStore;
 import com.thoughtworks.gauge.datastore.DataStoreFactory;
+
+import java.util.List;
 
 public class GenericGet {
     @Step("Retrieve the last updated time from the <endpoint> endpoint")
@@ -44,10 +47,15 @@ public class GenericGet {
                     .header("Accept", "*/*")
                     .asString();
             dataStore.put("httpResponse", httpResponse);
+            String httpResponseBody = httpResponse.getBody();
+            dataStore.put("httpResponseBody", httpResponseBody);
             Integer httpResponseCode = httpResponse.getStatus();
             dataStore.put("httpResponseCode", httpResponseCode);
             String httpResponseStatusText = httpResponse.getStatusText();
             dataStore.put("httpResponseStatusText", httpResponseStatusText);
+            Headers httpResponseHeaders = httpResponse.getHeaders();
+            String httpResponseContentType = httpResponseHeaders.getFirst("Content-Type");
+            dataStore.put("httpResponseContentType", httpResponseContentType);
             Gauge.writeMessage(httpResponse.getBody());
             Gauge.writeMessage(httpResponseStatusText);
 

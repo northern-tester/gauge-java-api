@@ -24,4 +24,5 @@ Details of the last response is returned when doing a GET to /forbidden/last end
 -------------------------------------------------------------------------------------------
 
 * Get to the "forbidden/last" endpoint
-// Implement a step that checks the response contains the correct details
+* Then the response content-type will be "application/json; charset=utf-8"
+* The response body for "forbidden" should contain "application/json" and "123"

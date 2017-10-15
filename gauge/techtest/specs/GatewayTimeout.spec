@@ -24,4 +24,6 @@ Details of the last response is returned when doing a GET to /gateway_timeout/la
 -------------------------------------------------------------------------------------------
 
 * Get to the "gateway_timeout/last" endpoint
-// Implement a step that checks the response contains the correct details
+* Then the response content-type will be "application/json; charset=utf-8"
+* The response body for "gateway_timeout" should contain "application/json" and "123"
+

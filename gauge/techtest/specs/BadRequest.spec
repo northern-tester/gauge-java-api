@@ -11,7 +11,7 @@ Bad Request is returned when doing a POST to the /bad_request endpoint
 
 * Post to the "bad_request" endpoint
 * Then the response will be "Bad Request"
-* The response code should be "403"
+* The response code should be "400"
 
 OK is returned when doing a GET to the /bad_request endpoint
 ------------------------------------------------------------
@@ -24,4 +24,5 @@ Details of the last response is returned when doing a GET to /bad_request/last e
 ---------------------------------------------------------------------------------------
 
 * Get to the "bad_request/last" endpoint
-// Implement a step that checks the response contains the correct details
+* Then the response content-type will be "application/json; charset=utf-8"
+* The response body for "bad_request" should contain "application/json" and "123"
