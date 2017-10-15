@@ -1,6 +1,8 @@
 Internal Server Error
 =====================
 
+tags: internal_server_error
+
 This is an executable specification file which follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
      
