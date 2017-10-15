@@ -1,5 +1,5 @@
-_Top Three Highlights_
-=====================
+_Highlights_
+============
 
 * Consistency is key in API creation, integrators need a consistent experience. JSON structure across certain endpoints is inconsistent, as is some instances of naming.
 * Data is often submitted in an incorrect and unsanitised state, the errors in the */last* endpoints with null and empty data suggest greater error handling required.
